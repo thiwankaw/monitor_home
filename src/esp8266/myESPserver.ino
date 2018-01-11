@@ -90,5 +90,9 @@ void setup(void){
 }
 
 void loop(void){
+  if (WiFi.status() == 6)
+  {
+    ESP.reset();
+  }
   server.handleClient();
 }
