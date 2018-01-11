@@ -1,6 +1,10 @@
 CREATE DATABASE `sensor_data` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
 
+GRANT ALL PRIVILEGES ON sensor_data.* TO 'data_user'@'localhost' IDENTIFIED BY 'data_pass';
+
+FLUSH PRIVILEGES;
+
 CREATE TABLE `samples` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `createdTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
